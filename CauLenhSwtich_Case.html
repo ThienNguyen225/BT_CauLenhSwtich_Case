@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh Swtich_case</title>
+</head>
+<body>
+    <input type="number" id="monthValue"/>
+    <input type="button" onclick="show()">Click</input>
+    <script>
+        function show() {
+            var month = parseInt(document.getElementById("monthValue").value);
+            var day;
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    day = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    day = 30;
+                    break;
+                case 2:
+                    day = "28 hoặc 29";
+                    break;
+            }
+            document.write("tháng " + month + " có " + day + " ngày");
+        }
+    </script>
+</body>
+</html>
